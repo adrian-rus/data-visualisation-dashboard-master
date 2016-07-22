@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dashboard made as a project for Back End Stream in Code Institute course">
+
+    <title>School Donations Org.</title>
+
+    <link rel="stylesheet" href="/static/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/lib/css/keen-dashboards.css">
+    <link rel="stylesheet" href="/static/lib/css/dc.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <link rel="stylesheet" href="/static/lib/css/introjs.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <script src="/static/lib/js/jquery.min.js"></script>
+    <script src="/static/js/custom.js"></script>
+
+ </head>
+
+<body class="application">
+
+<div class="loader"></div>
+
+<nav class="navbar navbar-inverse navbar-fixed-top text-uppercase" role="navigation">
+    <div class="container-fluid">
+    <div class="nav navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsing">
+	           <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="/">School Donations Organisation</a>
+       </div>
+       <div class="collapse navbar-collapse" id="collapsing">
+          <ul class="nav navbar-nav navbar-right">
+              <li> <a href="/">Home</a></li>
+              <li class="active"> <a href="/index/">Dashboard</a></li>
+              <li><button class="intro_button" type="button"
+                          autofocus onclick="javascript:introJs().start();">Start Tutorial!</button></li>
+          </ul>
+       </div>
+        </div>
+</nav>
+
+<section class="container text-center" id="entry-div">
+        <h2>Welcome to our School Donations Dashboard. </h2>
+        <h3> Please click on 'Start Tutorial' button to learn how to navigate around the page.</h3>
+</section>
+
+
+
+<section  id="outer" class="container-fluid">
+
+   <!-- menu select -->
+<div class="row" data-step="1" data-intro="Select the US state to see all the data regarding donations from
+that specific state. 'Select all' to see all US donations" data-position="bottom">
+           <div class="chart-wrapper">
+               <div class="chart-title">
+                   Select one US State or Select All to see donations:
+               </div>
+               <div class="chart-stage">
+                   <div id="menu-select"></div>
+               </div>
+           </div>
+</div>
+<!-- menu select -->
+
+    <div class="row">
+
+        <!-- primary focus area Pie -->
+               <div class="col-sm-4" data-step="2" data-intro="This graph shows where did schools
+               used donations" data-position="top">
+                   <div class="chart-wrapper">
+                       <div class="chart-title">
+                           Where were donations used
+                       </div>
+                       <div class="chart-stage">
+                           <div id="focus-area"></div>
+                       </div>
+                   </div>
+               </div>
+       <!-- primary focus area Pie -->
+
+       <!-- Poverty -->
+       <div class="col-sm-4" data-step="3" data-intro="This shows where did donations go and what level
+        of poverty they affected" data-position="top">
+           <div class="chart-wrapper">
+               <div class="chart-title">
+                   Poverty Level Affected by Donations
+               </div>
+               <div class="chart-stage">
+                   <div id="poverty-level-row-chart"></div>
+               </div>
+           </div>
+       </div>
+       <!-- Poverty -->
+
+        <!-- funding Pie -->
+               <div class="col-sm-4" data-step="4" data-intro="This is telling us if there is funding and if
+               is completed, expired or reallocated" data-position="top">
+                   <div class="chart-wrapper">
+                       <div class="chart-title">
+                           Funding Status
+                       </div>
+                       <div class="chart-stage">
+                           <div id="funding-chart"></div>
+                       </div>
+                   </div>
+               </div>
+               <!-- funding Pie -->
+
+    </div>
+
+    <div class="row">
+
+       <!-- Metric 1 -->
+       <div class="col-sm-6" data-step="5" data-intro="This tells you how many donations were made" data-position="top">
+           <div class="chart-wrapper">
+               <div class="chart-title">
+                   Total Number of Donations
+               </div>
+               <div class="chart-stage">
+                   <div id="number-projects-nd"></div>
+               </div>
+           </div>
+       </div>
+       <!-- Metric 1 -->
+
+       <!-- Metric 2 -->
+       <div class="col-sm-6" data-step="6" data-intro="This is the total value of donations made" data-position="top">
+           <div class="chart-wrapper">
+               <div class="chart-title">
+                   Total Figure of Donations in USD
+               </div>
+               <div class="chart-stage">
+                   <div id="total-donations-nd"></div>
+               </div>
+           </div>
+       </div>
+       <!-- Metric 2 -->
+    </div>
+
+   <div class="row">
+       <!-- Time Chart -->
+       <div class="col-sm-8" data-step="7" data-intro="This shows in what year donations were made by
+        the selected state" data-position="top">
+           <div class="chart-wrapper">
+               <div class="chart-title">
+                   Years and Donations Made
+               </div>
+               <div class="chart-stage">
+                   <div id="time-chart"></div>
+               </div>
+           </div>
+       </div>
+       <!-- Time Chart -->
+
+       <!-- Resources -->
+       <div class="col-sm-4" data-step="8" data-intro="This are the donation types - what exactly
+       was donated" data-position="top">
+           <div class="chart-wrapper">
+               <div class="chart-title">
+                   Donated items
+               </div>
+               <div class="chart-stage">
+                   <div id="resource-type-row-chart"></div>
+               </div>
+           </div>
+       </div>
+       <!-- Resources -->
+
+   </div>
+
+
+   </section>
+
+<hr>
+<p class="small text-muted"> Data visualization created by Adrian Rus - July 2016</p>
+
+<script src="/static/lib/js/jquery.min.js"></script>
+<script src="/static/lib/js/bootstrap.min.js"></script>
+<script src="/static/lib/js/crossfilter.js"></script>
+<script src="/static/lib/js/d3.js"></script>
+<script src="/static/lib/js/dc.js"></script>
+<script src="/static/lib/js/queue.js"></script>
+
+<script src="/static/lib/js/keen.min.js"></script>
+<script src='/static/js/graph.js' type='text/javascript'></script>
+<script src="/static/lib/js/intro.js" type="text/javascript"></script>
+</body>
+</html>
