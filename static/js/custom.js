@@ -1,5 +1,5 @@
 $(window).load(function() {
-	        $(".loader").fadeOut('slower');
+	        $(".loader").fadeOut('slowest');
             });
 
 $('document').ready(function () {
